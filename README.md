@@ -30,3 +30,18 @@ Font Awesome Free icons are being used as per the kit guidelines https://fontawe
 - Generics
 - Compiled to Javascript
 - Functions
+
+### Getting started
+
+Compile it to javascript and write it to dist folder
+- npx --package typescript tsc --outDir dist
+
+Create a new package.json file.
+- npm init -y
+
+Install typescript as dev dependecy from npm.
+- npm install typescript --save-dev
+
+Great site to find browser versions and feature support.
+[https://caniuse.com]
+
