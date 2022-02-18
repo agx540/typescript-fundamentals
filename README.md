@@ -45,3 +45,15 @@ Install typescript as dev dependecy from npm.
 Great site to find browser versions and feature support.
 [https://caniuse.com]
 
+### Using Variables, Types and Enums
+
+- string
+- number
+- boolean
+- array
+- any
+
+- enum minimize "magic strings" in code
+- const enum: save a lot of javascript code after compilation
+
+### Creating and Using Functions
