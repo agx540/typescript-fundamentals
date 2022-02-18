@@ -57,3 +57,21 @@ Great site to find browser versions and feature support.
 - const enum: save a lot of javascript code after compilation
 
 ### Creating and Using Functions
+
+#### Typed Parameters
+
+#### Defining functions
+
+#### return values
+
+#### Async/Await
+
+#### Optional parameters
+
+#### Arrow functions
+
+#### Default parameters
+
+#### Rest parameters
+
+#### Parameter destructuring
