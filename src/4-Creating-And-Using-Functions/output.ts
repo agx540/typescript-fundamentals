@@ -125,7 +125,7 @@ function runTheLearningSamples(){
 
   displayProducts(sampleProducts);
 
-  const getRandomInt = (max: number) => Math.floor(Math.random() * max);
+  const getRandomInt = (max: number = 1000) => Math.floor(Math.random() * max);
 
   function createProduct(name: string, icon?: string){
     const id = getRandomInt(1000);
@@ -140,4 +140,37 @@ function runTheLearningSamples(){
   let mango = createProduct('mango');
   console.log(pinapple, mango);
 
+  function createProductWithDefaults(
+    name: string, 
+    icon: string = 'generic-fruit.jpg',
+    ) : ProductType {
+      const id = getRandomInt();
+    
+      return {
+        id,
+        name, 
+        icon,}
+  }
+
+  let apple = createProductWithDefaults('apple');
+  let cherry = createProductWithDefaults('cherry','cherry.jpg' );
+  console.log(apple, cherry);
+
+  
+  
+  function buildAddress(street: string, city: string, ...restOfAddress: string[]){
+    const address = `STREET: ${street}  CITY: ${city} REST: ${restOfAddress.join(' ')}`;
+    console.table(restOfAddress);
+    return address;
+  }
+
+  const address = buildAddress(
+    'street1', 
+    'city1', 
+    'rest1',
+    'rest2',
+    'rest3',
+    'rest4');
+  console.log(`${prefix} rest parameter`);
+  console.log(address);
 }

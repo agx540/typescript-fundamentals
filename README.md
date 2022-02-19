@@ -58,20 +58,12 @@ Great site to find browser versions and feature support.
 
 ### Creating and Using Functions
 
-#### Typed Parameters
-
-#### Defining functions
-
-#### return values
-
-#### Async/Await
-
-#### Optional parameters
-
-#### Arrow functions
-
-#### Default parameters
-
-#### Rest parameters
-
-#### Parameter destructuring
+- Typed Parameters
+- Defining functions
+- return values
+- Async/Await
+- Optional parameters
+- Arrow functions
+- Default parameters
+- Rest parameters
+- Parameter destructuring

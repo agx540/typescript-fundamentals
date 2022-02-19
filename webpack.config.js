@@ -3,6 +3,7 @@ const fs = require('fs');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 const excludeDirs = ['css', 'images', 'lib', 'api', '_hello-ts'];
 const htmlPlugins = generateHtmlPlugins('./src', excludeDirs);
@@ -39,6 +40,7 @@ module.exports = {
         { from: 'src/api', to: 'api' },
       ],
     }),
+    new FaviconsWebpackPlugin('./favicon.ico'),
     new HtmlWebpackPlugin({
       template: './index.html',
       inject: false,
