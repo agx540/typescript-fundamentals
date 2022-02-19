@@ -1,3 +1,5 @@
+import { create } from 'domain';
+import { stringify } from 'querystring';
 import { productsURL } from '../lib';
 
 const prefix = '🐉 ';
@@ -44,8 +46,8 @@ function layoutProducts(products: ProductType[]) {
 }
 
 async function getProducts() : Promise<ProductType[]> {
-  const reponse: Response = await fetch(productsURL);
-  const products: ProductType[] = await reponse.json();
+  const response: Response = await fetch(productsURL);
+  const products: ProductType[] = await response.json();
   return products;
 }
 
@@ -123,6 +125,19 @@ function runTheLearningSamples(){
 
   displayProducts(sampleProducts);
 
+  const getRandomInt = (max: number) => Math.floor(Math.random() * max);
 
+  function createProduct(name: string, icon?: string){
+    const id = getRandomInt(1000);
+    return {id,
+      name, 
+      icon,}
+  }
+
+  console.log(`${prefix} create product`);
+  let pinapple = createProduct('pineapple', 'pine-apple.jpg');
+
+  let mango = createProduct('mango');
+  console.log(pinapple, mango);
 
 }
