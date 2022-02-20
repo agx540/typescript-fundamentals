@@ -67,3 +67,17 @@ Great site to find browser versions and feature support.
 - Default parameters
 - Rest parameters
 - Parameter destructuring
+
+### Interfaces
+
+#### Interface vs Type
+
+Interfaces are code contracts.
+
+Only for development time.
+
+Interfaces only allows to define shapes of object data structure.
+A Type can also act as an representative of primitive types too.
+
+let ProductAlias = string | {id: number, name: string}
+
