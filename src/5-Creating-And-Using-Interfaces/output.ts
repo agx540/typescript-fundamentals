@@ -1,4 +1,4 @@
-import { getProducts, Product } from '../lib';
+import { getProducts, Product, Product2 } from '../lib';
 
 export default async function updateOutput(id: string) {
   const products = await getProducts();
@@ -34,3 +34,18 @@ function layoutProducts(products: Product[]) {
   let productsHtml = `<ul>${items.join('')}</ul>`;
   return productsHtml;
 }
+
+
+let ProductAlex = {
+  id: 1,
+  name: 'name',
+  icon: 'icon.jpg',
+  description: 'description',
+}
+
+function consumeProduct(product: Product2) : void{
+  console.log(product);
+}
+
+console.log('####### spread product #######');
+consumeProduct({...ProductAlex, description: 'description2'});

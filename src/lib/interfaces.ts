@@ -6,6 +6,13 @@ export interface Product {
   validate(): boolean;
 }
 
+export interface Product2 {
+  id: number;
+  name: string;
+  icon: string;
+  description?: string;
+}
+
 // Examples of using a type alias
 type ProductAlias =
   | string
